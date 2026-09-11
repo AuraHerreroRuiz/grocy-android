@@ -68,6 +68,11 @@ a scanner for example using USB or Bluetooth™ and use it on the purchase/consu
 pages (the product field must be focused). Your scanner should have TAB or Enter as suffix,
 otherwise the workflow won't start after a scan.
 
+#### How can I use an NFC tag to quickly open a page in Grocy?
+
+See the Deeplinks section further below.
+
+
 ## How to
 
 #### How to consume a product?

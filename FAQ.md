@@ -11,6 +11,7 @@ Credits for the layout and some text of this FAQ go to [M66B](https://github.com
 * [How to](#how-to)
 * [Planned features](#planned-features)
 * [Frequently Asked Questions](#frequently-asked-questions)
+* [Deeplinks](#deeplinks)
 * [Support](#support)
 
 <a name="howto"></a>
@@ -62,6 +63,7 @@ Anything on this list is in random order and *might* be added in the near future
 * [(6) What is ML Kit barcode scanner?](#user-content-faq6)
 * [(7) How can I connect to my instance through Tor Hidden Service or Proxy?](#user-content-faq7)
 * [(8) How can I use my USB or Bluetooth™ barcode scanner device?](#user-content-faq8)
++ [(9) How can I use an NFC tag to quickly open a page in Grocy?](#user-content-faq9)
 [I have another question.](#support)
 
 <br />
@@ -130,6 +132,42 @@ Go to `app settings -> Network` and enable Tor support or HTTP-Proxy. Orbot is r
 **(8) How can I use my USB or Bluetooth™ barcode scanner device?**
 
 Go to `app settings -> Scanner` and enable support for external scanners. Then you can connect a scanner for example using USB or Bluetooth™ and use it on the purchase/consume/transfer/inventory pages (the product field must be focused). Your scanner should have TAB or Enter as suffix, otherwise the workflow won't start after a scan.
+
+<a name="faq9"></a>
+**(9) How can I use an NFC tag to quickly open a page in Grocy?**
+
+See [deeplinks](#deeplinks)
+
+## Deeplinks
+
+You can open a desired page of the app using an URI. This could be written e.g. into a NFC tag for
+easy navigation to the consume page or other pages in the app using physical interaction.
+
+#### URIs:
+
+- grocy://stockOverviewFragment
+- grocy://stockOverviewFragment?statusFilterId={statusFilterId}
+- grocy://shoppingListFragment
+- grocy://shoppingListItemEditFragment?action=create
+- grocy://shoppingModeFragment
+- grocy://purchaseFragment
+- grocy://consumeFragment
+- grocy://transferFragment
+- grocy://inventoryFragment
+- grocy://settingsFragment
+- grocy://tasksFragment
+- grocy://taskEntryEditFragment?action=create
+- grocy://choresFragment
+- grocy://choresFragment?statusFilterId={statusFilterId}
+- grocy://recipesFragment
+- grocy://masterDataOverviewFragment
+- grocy://stockEntriesFragment
+
+The value of parameter statusFilterId for the stockOverviewFragment URI can be 0 for all items,
+1 for due soon, 2 for overdue, 3 for expired, 4 for below min. stock amount, 5 for in stock, 6 for
+opened and 7 for "not fresh" combination. The value of parameter statusFilterId for the
+choresFragment URI can be 0 for all items, 1 for due today, 2 for due soon, 3 for overdue
+and 4 for due.
 
 ## Support
 
